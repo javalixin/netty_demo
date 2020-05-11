@@ -11,7 +11,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  */
 public class HelloServer {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws Exception {
         // 定义一对线程组
         // 主线程组，用于接受客户端的连接，但是不做任何处理，跟老板一样，不做事
         EventLoopGroup bossGroup = new NioEventLoopGroup();
