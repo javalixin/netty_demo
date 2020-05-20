@@ -38,6 +38,78 @@ public class CustomHandler extends SimpleChannelInboundHandler<HttpObject> {
             //把响应刷到客户端
             channelHandlerContext.writeAndFlush(fullHttpResponse);
         }
+    }
 
+    @Override
+    public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("====channel Registered====");
+        super.channelRegistered(ctx);
+    }
+
+    @Override
+    public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("====channel Unregistered====");
+        super.channelUnregistered(ctx);
+    }
+
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("====channel Active====");
+        super.channelActive(ctx);
+    }
+
+    @Override
+    public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("====channel Inactive====");
+        super.channelInactive(ctx);
+    }
+
+    @Override
+    public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("====channel Read Complete====");
+        super.channelReadComplete(ctx);
+    }
+
+    @Override
+    public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
+        System.out.println("====user Event Triggered====");
+        super.userEventTriggered(ctx, evt);
+    }
+
+    @Override
+    public void channelWritabilityChanged(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("====channel Writability Changed====");
+        super.channelWritabilityChanged(ctx);
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        System.out.println("====exception Caught====");
+        super.exceptionCaught(ctx, cause);
+    }
+
+    @Override
+    public boolean acceptInboundMessage(Object msg) throws Exception {
+        System.out.println("====accept Inbound Message====");
+//        System.out.println("====accept Inbound Message : "+msg.toString()+"====");
+        return super.acceptInboundMessage(msg);
+    }
+
+    @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        System.out.println("====channel Read====");
+        super.channelRead(ctx, msg);
+    }
+
+    @Override
+    public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("====handler Added====");
+        super.handlerAdded(ctx);
+    }
+
+    @Override
+    public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("====handler Removed====");
+        super.handlerRemoved(ctx);
     }
 }
