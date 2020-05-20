@@ -7,6 +7,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
+ * @author javal
  * @Description: 实现客户端发送一个请求，服务器会返回 hello netty
  */
 public class HelloServer {

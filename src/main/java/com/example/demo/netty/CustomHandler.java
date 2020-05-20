@@ -13,6 +13,7 @@ import java.nio.charset.Charset;
 
 /**
  * 自定义助手类
+ * @author javal
  */
 public class CustomHandler extends SimpleChannelInboundHandler<HttpObject> {
 

@@ -7,6 +7,7 @@ import io.netty.handler.codec.http.HttpServerCodec;
 
 /**
  *
+ * @author javal
  */
 public class HelloServerInitializer extends ChannelInitializer<SocketChannel> {
     @Override
